@@ -1074,7 +1074,7 @@
 // ============================
 // CONFIG — URL fija de Apps Script
 // ============================
-const API_URL = 'https://script.google.com/macros/s/AKfycbwKqlIFUMxTNgiDAQuygnqTLSVlU6BojYWd-AhWpl3Z1Rq_ECegsgZ5SyE4rhBxWsk/exec';
+const API_URL = 'https://script.google.com/macros/s/AKfycbwzX2m1-Otl8rd3Vj2sKJ4xQ0qo4NbM62uMBOaoLCidZ5yB2OocPlYhF7nkLn8tXuNZ/exec';
 
 // ============================
 // STATE
@@ -1425,7 +1425,7 @@ function saveRecord(type) {
       // Subir fotos Armado Especial
       const fotosAE = [...(photos['ae'] || [])];
       if (fotosAE.length > 0) {
-        uploadPhotos(fotosAE, unidad, document.getElementById('ae-cortina').value.trim(), session.date, session.squad, 'armado')
+        uploadPhotos(fotosAE, unidad, document.getElementById('ae-cortina').value.trim(), session.date, session.squad, 'armado_especial')
           .then(() => showToast(`📸 ${fotosAE.length} foto(s) armado especial enviada(s)`, 'success'))
           .catch(() => {});
       }
@@ -1457,7 +1457,7 @@ function saveRecord(type) {
       // Subir fotos A Detalle
       const fotosAD = [...(photos['ad'] || [])];
       if (fotosAD.length > 0) {
-        uploadPhotos(fotosAD, unidad, document.getElementById('ad-cortina').value.trim(), session.date, session.squad, 'armado')
+        uploadPhotos(fotosAD, unidad, document.getElementById('ad-cortina').value.trim(), session.date, session.squad, 'armado_detalle')
           .then(() => showToast(`📸 ${fotosAD.length} foto(s) a detalle enviada(s)`, 'success'))
           .catch(() => {});
       }
